@@ -124,11 +124,11 @@ public:
          * a large 32-bit integer with any alignment.
          * 0x901dcafe => goldcafe
          */
-        pchMessageStart[0] = 0x90;
-        pchMessageStart[1] = 0x1d;
-        pchMessageStart[2] = 0xca;
+        pchMessageStart[0] = 0xff;
+        pchMessageStart[1] = 0xff;
+        pchMessageStart[2] = 0xff;
         pchMessageStart[3] = 0xfe;
-        nDefaultPort = 30333;
+        nDefaultPort = 8033;
         nPruneAfterHeight = 104832; // about 2 years
 
         genesis = CreateGenesisBlock(1509526800/*20171101-170000*/, 7240431/*nonce*/, 0x1e0f901d/*bits*/, VERSIONBITS_TOP_BITS/*version*/, 50 * COIN/*subsidy*/);
@@ -137,18 +137,18 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x5fd8818c00a3e171e4d43e7194dfbc8df60ded3416e79af1688b3e5448c8564a"));
 
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,38);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
-        bech32_hrp = "BTG";
+        bech32_hrp = "BGC";
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.emplace_back("seed.bitgold.bitbaba.com", true);
+        //vSeeds.emplace_back("seed.bitgold.bitbaba.com", true);
 
-        vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
+        //vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;

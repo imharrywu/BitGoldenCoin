@@ -1,6 +1,6 @@
 #include <qt/test/wallettests.h>
 
-#include <qt/bitcoinamountfield.h>
+#include <qt/bitgoldencoinamountfield.h>
 #include <qt/callback.h>
 #include <qt/optionsmodel.h>
 #include <qt/platformstyle.h>

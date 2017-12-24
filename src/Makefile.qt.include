@@ -118,10 +118,10 @@ QT_MOC_CPP = \
   qt/moc_addresstablemodel.cpp \
   qt/moc_askpassphrasedialog.cpp \
   qt/moc_bantablemodel.cpp \
-  qt/moc_bitcoinaddressvalidator.cpp \
+  qt/moc_bitgoldencoinaddressvalidator.cpp \
   qt/moc_bitgoldencoinamountfield.cpp \
-  qt/moc_bitcoingui.cpp \
-  qt/moc_bitcoinunits.cpp \
+  qt/moc_bitgoldencoingui.cpp \
+  qt/moc_bitgoldencoinunits.cpp \
   qt/moc_callback.cpp \
   qt/moc_clientmodel.cpp \
   qt/moc_coincontroldialog.cpp \
@@ -296,10 +296,10 @@ RES_ICONS = \
 
 BITCOIN_QT_BASE_CPP = \
   qt/bantablemodel.cpp \
-  qt/bitcoinaddressvalidator.cpp \
+  qt/bitgoldencoinaddressvalidator.cpp \
   qt/bitgoldencoinamountfield.cpp \
-  qt/bitcoingui.cpp \
-  qt/bitcoinunits.cpp \
+  qt/bitgoldencoingui.cpp \
+  qt/bitgoldencoinunits.cpp \
   qt/clientmodel.cpp \
   qt/csvmodelwriter.cpp \
   qt/guiutil.cpp \

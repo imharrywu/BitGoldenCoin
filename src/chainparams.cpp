@@ -85,7 +85,7 @@ public:
         consensus.nSubsidyHalvingInterval = 210000;
         consensus.BIP16Height = 0;
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("0x0000018d2d31e4ed7df7b699d32cc1f4da1ba6e3e6f49a2b33b9ff43ffa630e0");
+        consensus.BIP34Hash = uint256S("0x00000a99d72e02e4af1af3b27a0b2ca0a7380401be9928c2f1cceafbe49de869");
         consensus.BIP65Height = 0;
         consensus.BIP66Height = 0;
 
@@ -130,10 +130,10 @@ public:
         nDefaultPort = 8033;
         nPruneAfterHeight = 104832; // about 2 years
 
-        genesis = CreateGenesisBlock(1514169573/*Mon Dec 25 10:39:33 CST 201*/, 7240431/*nonce*/, 0x1e0f901d/*bits*/, VERSIONBITS_TOP_BITS/*version*/, 50 * COIN/*subsidy*/);
+        genesis = CreateGenesisBlock(1514169573/*Mon Dec 25 10:39:33 CST 201*/, 874501/*nonce*/, 0x1e0f901d/*bits*/, VERSIONBITS_TOP_BITS/*version*/, 50 * COIN/*subsidy*/);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000018d2d31e4ed7df7b699d32cc1f4da1ba6e3e6f49a2b33b9ff43ffa630e0"));
-        assert(genesis.hashMerkleRoot == uint256S("0x5fd8818c00a3e171e4d43e7194dfbc8df60ded3416e79af1688b3e5448c8564a"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000a99d72e02e4af1af3b27a0b2ca0a7380401be9928c2f1cceafbe49de869"));
+        assert(genesis.hashMerkleRoot == uint256S("0x301189c6146dfbaab4db4d84b569d56283ccd8155c5c670e7e2f164bdc341aae"));
 
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);

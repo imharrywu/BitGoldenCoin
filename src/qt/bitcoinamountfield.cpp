@@ -4,7 +4,7 @@
 
 #include <qt/bitgoldencoinamountfield.h>
 
-#include <qt/bitcoinunits.h>
+#include <qt/bitgoldencoinunits.h>
 #include <qt/guiconstants.h>
 #include <qt/qvaluecombobox.h>
 

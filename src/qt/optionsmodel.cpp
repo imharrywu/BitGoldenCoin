@@ -8,7 +8,7 @@
 
 #include <qt/optionsmodel.h>
 
-#include <qt/bitcoinunits.h>
+#include <qt/bitgoldencoinunits.h>
 #include <qt/guiutil.h>
 
 #include <amount.h>

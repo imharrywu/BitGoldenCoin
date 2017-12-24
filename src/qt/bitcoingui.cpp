@@ -8,7 +8,7 @@
 
 #include <qt/bitcoingui.h>
 
-#include <qt/bitcoinunits.h>
+#include <qt/bitgoldencoinunits.h>
 #include <qt/clientmodel.h>
 #include <qt/guiconstants.h>
 #include <qt/guiutil.h>

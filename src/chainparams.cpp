@@ -85,7 +85,7 @@ public:
         consensus.nSubsidyHalvingInterval = 210000;
         consensus.BIP16Height = 0;
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("0x00000a99d72e02e4af1af3b27a0b2ca0a7380401be9928c2f1cceafbe49de869");
+        consensus.BIP34Hash = uint256S("0x00000166e8a986ce306bb9ed8f3f538f859d70ba1d99a16b3daf2b47d5db1719");
         consensus.BIP65Height = 0;
         consensus.BIP66Height = 0;
 
@@ -130,9 +130,9 @@ public:
         nDefaultPort = 8033;
         nPruneAfterHeight = 104832; // about 2 years
 
-        genesis = CreateGenesisBlock(1514169573/*Mon Dec 25 10:39:33 CST 201*/, 874501/*nonce*/, 0x1e0f901d/*bits*/, VERSIONBITS_TOP_BITS/*version*/, 50 * COIN/*subsidy*/);
+        genesis = CreateGenesisBlock(1514097954/*2017-11-24*/, 538962/*nonce*/, 0x1e0f901d/*bits*/, VERSIONBITS_TOP_BITS/*version*/, 50 * COIN/*subsidy*/);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000a99d72e02e4af1af3b27a0b2ca0a7380401be9928c2f1cceafbe49de869"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000166e8a986ce306bb9ed8f3f538f859d70ba1d99a16b3daf2b47d5db1719"));
         assert(genesis.hashMerkleRoot == uint256S("0x301189c6146dfbaab4db4d84b569d56283ccd8155c5c670e7e2f164bdc341aae"));
 
 
@@ -155,13 +155,13 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {     0, uint256S("0x00000a99d72e02e4af1af3b27a0b2ca0a7380401be9928c2f1cceafbe49de869")},
+                {     0, uint256S("0x00000166e8a986ce306bb9ed8f3f538f859d70ba1d99a16b3daf2b47d5db1719")},
             }
         };
 
         basepointData = (CBasepointData) {
             {
-                {     0, uint256S("0x00000a99d72e02e4af1af3b27a0b2ca0a7380401be9928c2f1cceafbe49de869")},
+                {     0, uint256S("0x00000166e8a986ce306bb9ed8f3f538f859d70ba1d99a16b3daf2b47d5db1719")},
             }
         };
 

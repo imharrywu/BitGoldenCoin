@@ -3018,7 +3018,7 @@
     </message>
     <message>
         <source>Bitcoin Core</source>
-        <translation>BitGoldenCoin Core</translation>
+        <translation>比特金币 核心</translation>
     </message>
     <message>
         <source>The %s developers</source>

@@ -167,7 +167,7 @@ BITCOIN_MM = \
 
 QT_MOC = \
   qt/bitcoin.moc \
-  qt/bitcoinamountfield.moc \
+  qt/bitgoldencoinamountfield.moc \
   qt/callback.moc \
   qt/intro.moc \
   qt/overviewpage.moc \

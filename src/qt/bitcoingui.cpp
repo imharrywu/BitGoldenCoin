@@ -6,7 +6,7 @@
 #include <config/bitcoin-config.h>
 #endif
 
-#include <qt/bitcoingui.h>
+#include <qt/bitgoldencoingui.h>
 
 #include <qt/bitgoldencoinunits.h>
 #include <qt/clientmodel.h>

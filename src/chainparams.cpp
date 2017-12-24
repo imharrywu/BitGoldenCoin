@@ -57,7 +57,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "DJIA 31/Nov/2017 closed at 23377.24";
+    const char* pszTimestamp = "24/Dec/2017 British troops get just 1 pound each to celebrate Christmas in Afghanistan";
     const CScript genesisOutputScript = CScript() << ParseHex("048183aecd19078802388a000d81b292cc3e55782df76164ea111cd7a29a0f842ac419590423b0df91602f1e2882f1534d43844cd8d69c0046556d36ab44aaba85") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -83,11 +83,11 @@ public:
     CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 210000;
-        consensus.BIP16Height = 0; // 0x0000018d2d31e4ed7df7b699d32cc1f4da1ba6e3e6f49a2b33b9ff43ffa630e0
+        consensus.BIP16Height = 0;
         consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256S("0x0000018d2d31e4ed7df7b699d32cc1f4da1ba6e3e6f49a2b33b9ff43ffa630e0");
-        consensus.BIP65Height = 0; // 0x0000018d2d31e4ed7df7b699d32cc1f4da1ba6e3e6f49a2b33b9ff43ffa630e0
-        consensus.BIP66Height = 0; // 0x0000018d2d31e4ed7df7b699d32cc1f4da1ba6e3e6f49a2b33b9ff43ffa630e0
+        consensus.BIP65Height = 0;
+        consensus.BIP66Height = 0;
 
         consensus.powLimit = uint256S("0x00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
@@ -122,7 +122,6 @@ public:
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
-         * 0x901dcafe => goldcafe
          */
         pchMessageStart[0] = 0xff;
         pchMessageStart[1] = 0xff;
@@ -131,7 +130,7 @@ public:
         nDefaultPort = 8033;
         nPruneAfterHeight = 104832; // about 2 years
 
-        genesis = CreateGenesisBlock(1509526800/*20171101-170000*/, 7240431/*nonce*/, 0x1e0f901d/*bits*/, VERSIONBITS_TOP_BITS/*version*/, 50 * COIN/*subsidy*/);
+        genesis = CreateGenesisBlock(1514169573/*Mon Dec 25 10:39:33 CST 201*/, 7240431/*nonce*/, 0x1e0f901d/*bits*/, VERSIONBITS_TOP_BITS/*version*/, 50 * COIN/*subsidy*/);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x0000018d2d31e4ed7df7b699d32cc1f4da1ba6e3e6f49a2b33b9ff43ffa630e0"));
         assert(genesis.hashMerkleRoot == uint256S("0x5fd8818c00a3e171e4d43e7194dfbc8df60ded3416e79af1688b3e5448c8564a"));

@@ -187,10 +187,10 @@ BITCOIN_QT_H = \
   qt/addresstablemodel.h \
   qt/askpassphrasedialog.h \
   qt/bantablemodel.h \
-  qt/bitcoinaddressvalidator.h \
-  qt/bitcoinamountfield.h \
-  qt/bitcoingui.h \
-  qt/bitcoinunits.h \
+  qt/bitgoldencoinaddressvalidator.h \
+  qt/bitgoldencoinamountfield.h \
+  qt/bitgoldencoingui.h \
+  qt/bitgoldencoinunits.h \
   qt/callback.h \
   qt/clientmodel.h \
   qt/coincontroldialog.h \

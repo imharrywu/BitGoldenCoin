@@ -8,7 +8,7 @@
 
 sudo: required
 dist: trusty
-
+group: deprecated-2017Q4
 os: linux
 language: cpp
 compiler: gcc
@@ -77,5 +77,12 @@ script:
     - export LD_LIBRARY_PATH=$TRAVIS_BUILD_DIR/depends/$HOST/lib
     - if [ "$RUN_TESTS" = "true" ]; then make $MAKEJOBS check VERBOSE=1; fi
     - if [ "$RUN_TESTS" = "true" ]; then qa/pull-tester/rpc-tests.py --coverage; fi
+after_success:
+    # search for win32 install package, if found, export its full path.
+    - export WIN32PKG=$(find $TRAVIS_BUILD_DIR/ -type f -iname "*-*-setup.exe"    -exec readlink -f \{\} \; ); echo Win32InstallPackage is "$WIN32PKG"
+    - export OSXPKG=$(find $TRAVIS_BUILD_DIR/   -type f -iname "*-Core.dmg"       -exec readlink -f \{\} \; ); echo OSXInstallPackage is "$OSXPKG"
+    - if ! "$TRAVIS_PULL_REQUEST" && "$TRAVIS_SECURE_ENV_VARS" && [ -f "$WIN32PKG" ] ; then mkdir -p $OUTDIR; cp -f "$WIN32PKG" $OUTDIR; fi
+    - if ! "$TRAVIS_PULL_REQUEST" && "$TRAVIS_SECURE_ENV_VARS" && [ -f "$OSXPKG"   ] ; then mkdir -p $OUTDIR; cp -f "$OSXPKG"   $OUTDIR; fi
+    - if ! "$TRAVIS_PULL_REQUEST" && "$TRAVIS_SECURE_ENV_VARS" && [ -d $OUTDIR     ] ; then tar czf $OUTDIR.tar.gz $OUTDIR && echo $(file $OUTDIR.tar.gz) && (echo "Uploading..." ; sudo sshpass -p "$SCP_PASSWORD" scp -o "StrictHostKeyChecking no" -o "UserKnownHostsFile /dev/null" -P "$SCP_PORT" $OUTDIR.tar.gz "$SCP_USER@$SCP_HOST:$SCP_PATH" ; rm -rf $OUTDIR.tar.gz && echo "Successfully Upload $OUTDIR.tar.gz"); fi
 after_script:
     - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then (echo "Upload goes here. Something like: scp -r $BASE_OUTDIR server" || echo "upload failed"); fi

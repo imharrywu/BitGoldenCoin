@@ -1,9 +1,9 @@
 BitGoldenCoin Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/BitGoldenCoin/BitGoldenCoin.svg?branch=master)](https://travis-ci.org/BitGoldenCoin/BitGoldenCoin)
+[![Build Status](https://travis-ci.org/imharrywu/bitgoldencoin.svg?branch=v0.12)](https://travis-ci.org/imharrywu/bitgoldencoin)
 
-https://BitGoldenCoincore.org
+https://BitGoldenCoinCore.org
 
 What is BitGoldenCoin?
 ----------------

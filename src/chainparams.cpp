@@ -145,15 +145,15 @@ public:
         bech32_hrp = "BGC";
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.emplace_back("p1.bitgoldencoin.net", true);
-        vSeeds.emplace_back("p2.bitgoldencoin.net", true);
-        vSeeds.emplace_back("p3.bitgoldencoin.net", true);
-        vSeeds.emplace_back("p1.btgoldcoin.net", true);
-        vSeeds.emplace_back("p2.btgoldcoin.net", true);
-        vSeeds.emplace_back("p3.btgoldcoin.net", true);
-        vSeeds.emplace_back("p1.cadvb.cc", true);
-        vSeeds.emplace_back("p2.cadvb.cc", true);
-        vSeeds.emplace_back("p3.cadvb.cc", true);
+        vSeeds.emplace_back("p1.bitgoldencoin.net");
+        vSeeds.emplace_back("p2.bitgoldencoin.net");
+        vSeeds.emplace_back("p3.bitgoldencoin.net");
+        vSeeds.emplace_back("p1.btgoldcoin.net");
+        vSeeds.emplace_back("p2.btgoldcoin.net");
+        vSeeds.emplace_back("p3.btgoldcoin.net");
+        vSeeds.emplace_back("p1.cadvb.cc");
+        vSeeds.emplace_back("p2.cadvb.cc");
+        vSeeds.emplace_back("p3.cadvb.cc");
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 

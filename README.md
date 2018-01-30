@@ -1,7 +1,7 @@
 BitGoldenCoin Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/imharrywu/bitgoldencoin.svg?branch=v0.12)](https://travis-ci.org/imharrywu/bitgoldencoin)
+[![Build Status](https://travis-ci.org/bitgoldencoin/bitgoldencoin.svg?branch=v0.12)](https://travis-ci.org/bitgoldencoin/bitgoldencoin)
 
 https://BitGoldenCoinCore.org
 

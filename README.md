@@ -3,7 +3,7 @@ BitGoldenCoin Core integration/staging tree
 
 [![Build Status](https://travis-ci.org/bitgoldencoin/bitgoldencoin.svg?branch=v0.12)](https://travis-ci.org/bitgoldencoin/bitgoldencoin)
 
-https://BitGoldenCoinCore.org
+https://bitgoldengoincore.org
 
 What is BitGoldenCoin?
 ----------------
@@ -15,7 +15,7 @@ out collectively by the network. BitGoldenCoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the BitGoldenCoin Core software, see https://BitGoldenCoin.org/en/download, or read the
+the BitGoldenCoin Core software, see https://bitgoldengoincore.org/en/download, or read the
 [original whitepaper](https://BitGoldenCoincore.org/BitGoldenCoin.pdf).
 
 License
